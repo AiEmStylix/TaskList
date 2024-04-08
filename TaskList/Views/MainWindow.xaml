@@ -1,0 +1,86 @@
+﻿<Window x:Class="TaskList.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskList.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="832" Width="1280"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="435" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="140" />
+        </Grid.ColumnDefinitions>
+        
+        <!-- Navigation Panel-->
+        <Rectangle Fill="{StaticResource AccentDark}"/>
+        
+        <!--Task List Background-->
+
+        <Rectangle Fill="{StaticResource TaskListBackground}"
+                   Grid.Column="1" Grid.ColumnSpan="2" Margin="1,0,624,0"/>
+        <!--Task List Grid-->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="38" />
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Task Label-->
+            <Label Style="{StaticResource Heading1}" Content="Task"
+                   VerticalAlignment="Center" 
+                   Padding="26,0,0,0"
+                   IsHitTestVisible="False"/>
+
+            <!-- Add New Task Button-->
+            <Button
+                Style="{StaticResource RoundAccentButton}"
+                HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Height="40" Width="40"
+                    Margin="0,0,20,0">
+                <!-- Icon-->
+                <Viewbox Width="16"
+                         Height="16">
+                    <Path Data="{StaticResource NewTaskIcon}" Fill="{StaticResource OnAccent}"/>
+                </Viewbox>
+            </Button>
+            
+            <!-- Search Bar-->
+            <TextBox x:Name="TextSearchBox"
+                     Grid.Row="1" Style="{StaticResource TaskListSearchBox}"
+                     Margin="20,0"/>
+
+            <Label Content="Search Task..."
+                   IsHitTestVisible="False"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   Margin="40,0,0,0"
+                   Foreground="{StaticResource Borders}"
+                   Visibility="{Binding Text.IsEmpty, ElementName=TextSearchBox, Converter={StaticResource BooleanToVisibiltyConverter}}"/>
+
+            <Button Style="{StaticResource SearchIcon}"
+                    Grid.Row="1"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Margin="0,0,30,0"
+                    Padding="10"
+                    Background="White"
+                    BorderBrush="Transparent"
+                    Height="30">
+             
+                <Viewbox Width="16" Height="15">
+                    <Path Data="{StaticResource SearchBarIcon}" Fill="{StaticResource Borders}"/>
+                </Viewbox>
+            </Button>
+        </Grid>
+      
+        <!--Task Status Bar-->
+        <Rectangle Fill="{StaticResource TaskStatusBackground}"
+                   Grid.Column="3"/>
+    </Grid>
+</Window>

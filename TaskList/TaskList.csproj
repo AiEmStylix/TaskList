@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DataService\Assets\**" />
+    <EmbeddedResource Remove="DataService\Assets\**" />
+    <None Remove="DataService\Assets\**" />
+    <Page Remove="DataService\Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net8.0-windows\TaskList.deps.json" />
+    <Content Include="bin\Debug\net8.0-windows\TaskList.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\Files\Data\" />
+    <Folder Include="Assets\Files\Txt\" />
+    <Folder Include="Assets\Images\" />
+    <Folder Include="Assets\SVG\" />
+    <Folder Include="DataService\" />
+    <Folder Include="Dictionaries\NewFolder\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net8.0-windows\TaskList.dll" />
+    <None Include="bin\Debug\net8.0-windows\TaskList.exe" />
+    <None Include="bin\Debug\net8.0-windows\TaskList.pdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpVectors.Wpf" Version="1.8.4" />
+  </ItemGroup>
+
+</Project>
