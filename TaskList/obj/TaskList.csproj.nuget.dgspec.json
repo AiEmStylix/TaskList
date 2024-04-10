@@ -44,12 +44,6 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "dependencies": {
-            "SharpVectors.Wpf": {
-              "target": "Package",
-              "version": "[1.8.4, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

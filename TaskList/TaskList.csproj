@@ -36,8 +36,4 @@
     <None Include="bin\Debug\net8.0-windows\TaskList.pdb" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="SharpVectors.Wpf" Version="1.8.4" />
-  </ItemGroup>
-
 </Project>

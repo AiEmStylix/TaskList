@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zwqyseiS3d5WhOs287Bes6LOh9ICMQ/q1I4kQc5pWKrtBPLjN4LJJ5zlkOG/SSnv0thQViW39rNZXAXkdDYCRA==",
+  "dgSpecHash": "IWmAnrexciGxKLJ7nGRW7cS0ntRdb6bR5V6V70F7WwSSX3USREWQ/9dnYuFaab6Q7Gqh0pymbu2c5VhBAQvIkg==",
   "success": true,
   "projectFilePath": "D:\\Repos\\TaskList\\TaskList\\TaskList.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\stylix\\.nuget\\packages\\sharpvectors.wpf\\1.8.4\\sharpvectors.wpf.1.8.4.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
